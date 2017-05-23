@@ -6,39 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Material Design Bootstrap</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Material Icons -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-material-design.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/ripples.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-
 <body>
+    
+    <nav class="navbar navbar-static-top navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#cpllapseMobileMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-    <!-- Start your project here-->
-    <div style="height: 100vh">
-        <div class="flex-center flex-column">
-            <h1 class="animated fadeIn mb-2">Material Design for Bootstrap</h1>
+                <a href="#" class="navbar-brand">Brand</a>
+            </div>
 
-            <h5 class="animated fadeIn mb-1">Thank you for using our product. We're glad you're with us.</h5>
-
-            <p class="animated fadeIn text-muted">MDB Team</p>
+            <div class="navbar-collapse collapse" id="cpllapseMobileMenu">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">more</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">More 1</a></li>
+                            <li><a href="#">More 2</a></li>
+                            <li><a href="#">More 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <!-- /Start your project here-->
+    </nav>
+    
 
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/tether.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
+
+    <!-- scripts -->
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/material.min.js"></script>
+    <script type="text/javascript" src="js/ripples.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
 </body>
-
 </html>
