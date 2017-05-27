@@ -1,0 +1,263 @@
+body {
+	background: white;
+	font-family: $roboto;
+}
+
+.navbar {
+	font-family: $roboto;
+	position: absolute;
+	background: transparent;
+	width: 100%;
+	transition: all ease-in-out 300ms;
+	padding: 15px 0px;
+
+	.container {
+		.navbar-header {
+			.navbar-toggle {
+				background: transparent;
+				border: none;
+				outline: none;
+				box-shadow: none;
+				color: black;
+
+				&:hover,
+				&:focus {
+					background: transparent;
+				}
+			}
+
+			.navbar-brand {
+				display: block;
+				width: 80px;
+				height: 44px;
+				padding: 0px;
+
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+
+		.mob_menu {
+			.navbar-nav {
+				margin-top: 5px;
+
+				> li {
+					> a {
+						color: black;
+						font-family: $roboto;
+						font-weight: 900;
+						@media (min-width: 768px) {
+							padding: 10px 15px;
+							border-radius: 500px;
+						}
+
+						&:hover,
+						&:focus {
+							color: #333;
+						}
+					}
+
+                    &.active {
+                        > a,
+                        > a:hover,
+                        > a:focus {
+                            background: white;
+                            color: black;
+                        }
+                    }
+				}
+
+				@media (max-width: 768px) {
+					margin: 0 auto;
+				}
+			}
+
+			@media (max-width: 768px) {
+				width: 250px;
+				height: 100%;
+				position: fixed;
+				top: 0;
+				left: 0;
+				background: white;
+				box-shadow: 2px 0 15px 0 rgba(black , .20);
+				transform: translateX(-250px);
+				transition: all ease-in-out 300ms;
+
+				&.open {
+					transform: translateX(0px);
+				}
+			}
+		}
+	}
+
+	&.scrolled {
+		background: white;
+		position: fixed;
+
+		.mob_menu {
+			.navbar-nav {
+				li.active {
+					> a,
+					> a:hover,
+					> a:focus {
+						background: black;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.jumbotron {
+	display: block;
+	background: #fdfdfd;
+	height: 100vh;
+	position: relative;
+	padding: 0px;
+	overflow: hidden;
+    margin-bottom: 0px;
+	
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 74px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: {
+			image: url(../img/overlays/02.png);
+			repeat: repeat;
+			attachment: fixed;
+			color: rgba(0, 0, 0, 0.06);
+		}
+		z-index: 2;
+	}
+
+	.parallax {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+
+		img {
+			display: block;
+			width: 100%;
+			min-height: 100%;
+		}
+	}
+
+	.header_inner {
+		display: table;
+		position: absolute;
+		height: 100%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		top: 0;
+		z-index: 4;
+		max-width: 100%;
+
+		@media (min-width: 768px) {
+			width: 750px;
+		}
+
+		@media (min-width: 992px) {
+			width: 970px;
+		}
+
+		@media (min-width: 1200px) {
+			width: 1170px;
+		}
+
+		.header_middle {
+			display: table-cell;
+    		vertical-align: middle;
+			
+
+			.center_content {
+				margin: 0 auto;
+
+				.intro {
+					display: block;
+					float: left;
+					padding: 10px;
+					color: white;
+					font-family: $roboto;
+					width: 50%;
+					line-height: 1.5;
+					@media (max-width: 768px) {
+						width: 100%;
+						float: none;
+						text-align: center;
+						padding: 0px 3rem;
+					}
+
+					h1 {
+						font-size: 3.5vw;
+						position: relative;
+						@media (max-width: 768px) {
+							font-size: 8.5vw;
+						}
+
+						@media (min-width: 768px) {
+							&:before {
+								content: "";
+								display: block;
+								width: 30px;
+								height: 3px;
+								position: absolute;
+								left: 0;
+								bottom: -8px;
+								background: white;
+							}
+						}
+					}
+
+					sub {
+						font-size: 2vw;
+						line-height: 1.5;
+						display: block;
+
+						@media (max-width: 768px) {
+							font-size: 4.4vw;
+						}
+
+						&:before,
+						&:after {
+							display: block;
+							content: "";
+							height: 15px;
+						}
+					}
+				}
+
+				.app_screen {
+					@media (max-width: 768px) {
+						display: none;
+					}
+					position: absolute;
+					right: 0;
+					bottom: 13px;
+					display: block;
+					float: right;
+					width: 50%;
+					height: 502px;
+					background: {
+						image: url(../img/bubbles_app_screen.png);
+						repeat: no-repeat;
+						size: contain;
+						position: right center;
+					}
+				}
+			}
+		}
+	}
+}
